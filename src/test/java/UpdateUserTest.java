@@ -48,7 +48,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    //Изменение данных пользователя с авторизацией (Email)
+    @Description("Изменение данных пользователя с авторизацией (Email)")
     public void updateUserEmailWithLoginTest(){
 
         user.setEmail(newEmail);
@@ -70,7 +70,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    //Изменение данных пользователя с авторизацией (Name)
+    @Description("Изменение данных пользователя с авторизацией (Name)")
     public void updateUserNameWithLoginTest(){
 
         user.setName(newName);
@@ -92,7 +92,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    //Изменение данных пользователя с авторизацией (Password)
+    @Description("Изменение данных пользователя с авторизацией (Password)")
     public void updateUserPasswordWithLoginTest(){
 
         user.setPassword(newPassword);
@@ -112,7 +112,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    //Изменение данных пользователя без авторизации (Email)
+    @Description("Изменение данных пользователя без авторизации (Email)")
     public void updateUserEmailWithoutLoginTest(){
 
         user.setEmail(newEmail);
@@ -130,7 +130,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    // Изменение данных пользователя без авторизации (Name)
+    @Description("Изменение данных пользователя без авторизации (Name)")
     public void updateUserNameWithoutLoginTest(){
 
         user.setName(newName);
@@ -148,7 +148,7 @@ public class UpdateUserTest {
     }
 
     @Test
-    //Изменение данных пользователя без авторизации (Password)
+    @Description("Изменение данных пользователя без авторизации (Password)")
     public void updateUserPasswordWithoutLoginTest(){
 
         user.setPassword(newPassword);

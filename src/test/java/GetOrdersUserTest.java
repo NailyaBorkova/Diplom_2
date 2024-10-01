@@ -72,7 +72,7 @@ public class GetOrdersUserTest {
     }
 
     @Test
-    //Получение заказов конкретного пользователя с авторизацией
+    @Description("Получение заказов конкретного пользователя с авторизацией")
     public void getOrdersUserWithLoginTest() {
 
         ValidatableResponse responseGetOrdersByUser = ordersApi.getOrdersByUserRequest(token);
@@ -89,7 +89,7 @@ public class GetOrdersUserTest {
     }
 
     @Test
-    //Получение заказов конкретного пользователя без авторизации
+    @Description("Получение заказов конкретного пользователя без авторизации")
     public void getOrdersUserWithoutLoginTest() {
 
         ValidatableResponse responseGetOrdersByUser = ordersApi.getOrdersByUserRequest("");

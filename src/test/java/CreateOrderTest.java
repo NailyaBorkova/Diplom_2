@@ -1,6 +1,7 @@
 import api.*;
 import data.*;
 import generators.UserGenerator;
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -22,7 +23,7 @@ public class CreateOrderTest {
     private String bearerToken;
 
     @Before
-    public void CreateVariables(){
+    public void сreateVariables(){
         authApi = new AuthApi();
         user = UserGenerator.getSuccessCreateUser();
         login = new UserLogin();
@@ -45,7 +46,7 @@ public class CreateOrderTest {
     }
 
     @Test
-    //Создание заказа с ингредиентами с авторизацией
+    @Description("Создание заказа с ингредиентами с авторизацией")
     public void createOrderWithLoginTest() {
         ValidatableResponse responseIngredients = getIngredients.getIngredientsRequest();
 
@@ -77,7 +78,7 @@ public class CreateOrderTest {
     }
 
     @Test
-    //Создание заказа с ингредиентами без авторизации
+    @Description("Создание заказа с ингредиентами без авторизации")
     public void createOrderWithoutLoginTest() {
 
         ValidatableResponse responseIngredients = getIngredients.getIngredientsRequest();
@@ -108,7 +109,7 @@ public class CreateOrderTest {
     }
 
     @Test
-    //Создание заказа без ингредиентов
+    @Description("Создание заказа без ингредиентов")
     public void createOrderWithoutIngredientsTest() {
         ArrayList<String> listString = new ArrayList<>();
         ListIngredient listIngredient = new ListIngredient(listString);
@@ -126,7 +127,7 @@ public class CreateOrderTest {
     }
 
     @Test
-    //Создание заказа с неверным хешем ингредиентов
+    @Description("Создание заказа с неверным хешем ингредиентов")
     public void createOrderWithIncorrectHashTest() {
         ValidatableResponse responseIngredients = getIngredients.getIngredientsRequest();
 

@@ -37,7 +37,7 @@ public class UserLoginTest {
     }
 
     @Test
-    //логин под существующим пользователем")
+    @Description("логин под существующим пользователем")
     public void loginExistingUserTest(){
 
         ValidatableResponse responseLogin = authApi.loginUserRequest(login.from(user));
@@ -53,7 +53,7 @@ public class UserLoginTest {
     }
 
     @Test
-    //логин с неверным логином")
+    @Description("логин с неверным логином")
     public void loginWithInvalidEmailTest(){
 
         user.setEmail("1234");
@@ -69,7 +69,7 @@ public class UserLoginTest {
     }
 
     @Test
-    //логин с неверным паролем
+    @Description("логин с неверным паролем")
     public void loginWithInvalidPasswordTest(){
 
         user.setPassword("1234");

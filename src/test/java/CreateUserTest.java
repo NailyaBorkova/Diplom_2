@@ -38,7 +38,7 @@ public class CreateUserTest {
     }
 
     @Test
-    //создать уникального пользователя")
+    @Description("создать уникального пользователя")
     public void createUniqueUserTest(){
 
         ValidatableResponse responseCreate = authApi.createUserRequest(user);
@@ -65,7 +65,7 @@ public class CreateUserTest {
     }
 
     @Test
-    //создать пользователя, который уже зарегистрирован
+    @Description("создать пользователя, который уже зарегистрирован")
     public void createNotUniqueUserTest(){
 
         ValidatableResponse responseCreate = authApi.createUserRequest(user);
@@ -97,7 +97,7 @@ public class CreateUserTest {
     }
 
     @Test
-    //создать пользователя и не заполнить одно из обязательных полей (email)
+    @Description("создать пользователя и не заполнить одно из обязательных полей (email)")
     public void createUserWithoutEmailTest(){
 
         user.setEmail(null);
@@ -113,7 +113,7 @@ public class CreateUserTest {
     }
 
     @Test
-    //создать пользователя и не заполнить одно из обязательных полей (password)
+    @Description("создать пользователя и не заполнить одно из обязательных полей (password)")
     public void createUserWithoutPasswordTest(){
 
         user.setPassword(null);
@@ -131,7 +131,7 @@ public class CreateUserTest {
     }
 
     @Test
-    //создать пользователя и не заполнить одно из обязательных полей (name)
+    @Description("создать пользователя и не заполнить одно из обязательных полей (name)")
     public void createUserWithoutNameTest(){
 
         user.setName(null);
