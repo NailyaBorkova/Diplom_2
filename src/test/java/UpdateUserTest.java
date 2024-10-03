@@ -1,7 +1,6 @@
 import api.*;
 import generators.UserGenerator;
 import io.qameta.allure.Description;
-import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -22,7 +21,7 @@ public class UpdateUserTest {
     private final static String ERROR_MESSAGE_NOT_AUTHORISED = "You should be authorised";
 
     @Before
-    public void CreateVariables(){
+    public void createVariables(){
 
         authApi = new AuthApi();
         user = UserGenerator.getSuccessCreateUser();

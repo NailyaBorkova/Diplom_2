@@ -1,7 +1,6 @@
 import api.*;
 import generators.UserGenerator;
 import io.qameta.allure.Description;
-import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Test;
@@ -20,7 +19,7 @@ public class CreateUserTest {
     private final static String ERROR_MESSAGE_REQUIRED_FIELD = "Email, password and name are required fields";
 
     @Before
-    public void CreateVariables(){
+    public void createVariables(){
 
         authApi = new AuthApi();
         user = UserGenerator.getSuccessCreateUser();

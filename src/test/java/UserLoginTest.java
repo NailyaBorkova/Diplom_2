@@ -1,7 +1,6 @@
 import api.*;
 import generators.UserGenerator;
 import io.qameta.allure.Description;
-import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -19,7 +18,7 @@ public class UserLoginTest {
     private final static String ERROR_MESSAGE_INCORRECT_FIELD = "email or password are incorrect";
 
     @Before
-    public void CreateVariables(){
+    public void createVariables(){
         authApi = new AuthApi();
         user = UserGenerator.getSuccessCreateUser();
         login = new UserLogin();
